@@ -1,5 +1,9 @@
 # Cassandra
 
+## Cassandra Data Modeling Basics
+
+* https://www.datastax.com/blog/basic-rules-cassandra-data-modeling
+
 ## Installing Cassandra
 
 ```
