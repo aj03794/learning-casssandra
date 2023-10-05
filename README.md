@@ -4,6 +4,10 @@
 
 * https://www.datastax.com/blog/basic-rules-cassandra-data-modeling
 
+## Gossip Protocoll
+
+* Allows nodes to exchange information about themselves with other nodes
+
 ## Hinted Handoff
 
 https://cassandra.apache.org/doc/latest/cassandra/operating/hints.html#:~:text=Hinted%20handoff%20is%20the%20process,with%20Replication%20Factor%20of%203%20.
