@@ -4,6 +4,13 @@
 
 * https://www.datastax.com/blog/basic-rules-cassandra-data-modeling
 
+## Hinted Handoff
+
+https://cassandra.apache.org/doc/latest/cassandra/operating/hints.html#:~:text=Hinted%20handoff%20is%20the%20process,with%20Replication%20Factor%20of%203%20.
+
+* Data repair technique applied during write operations
+* ONe of the ways that Cassandra implements the eventual consistency guarantee that all updates are eventually received by all replicas
+
 ## Installing Cassandra
 
 ```
