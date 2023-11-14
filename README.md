@@ -4,7 +4,7 @@
 
 * https://www.datastax.com/blog/basic-rules-cassandra-data-modeling
 
-## Gossip Protocoll
+## Gossip Protocol
 
 * Allows nodes to exchange information about themselves with other nodes
 
@@ -13,7 +13,7 @@
 https://cassandra.apache.org/doc/latest/cassandra/operating/hints.html#:~:text=Hinted%20handoff%20is%20the%20process,with%20Replication%20Factor%20of%203%20.
 
 * Data repair technique applied during write operations
-* ONe of the ways that Cassandra implements the eventual consistency guarantee that all updates are eventually received by all replicas
+* Oe of the ways that Cassandra implements the eventual consistency guarantee that all updates are eventually received by all replicas
 
 ## Installing Cassandra
 
@@ -23,6 +23,8 @@ cqlsh> CREATE KEYSPACE my_keyspace WITH replication = {'class':
 ```
 
 - `replication_factor` indicates how many nodes the data in this keyspace will be written to
+- If `replication_factor = 3` that means each node will be responsible for 3 token ranges and each piece of data you write will live on 3 separate nodes
+  - Reminder that the `token` is created by taking a hash of the `primary key` of the row
 
 ```
 cqlsh:my_keyspace> CREATE TABLE user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
