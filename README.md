@@ -821,3 +821,11 @@ points int,
 id UUID,lastname text,
 PRIMARY KEY (category)
 ); 
+
+## Cassandra Secondary Attached Index (SAIs)
+
+- https://www.datastax.com/dev/cassandra-indexing
+
+- Indexes allow you to query columns outside the Cassandra partition key without using the `ALLOW FILTERING` keyword or create custom tables 
+  - Also do not need to create custom tables for each query pattern
+- You can create a table that is most natural for you and query it any way you want
